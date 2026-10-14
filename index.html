@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Macro & Stock Intelligence</title>
+    <title>Macro & Stock Intelligence Hub</title>
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#0f172a">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -14,7 +14,7 @@
     <header class="bg-slate-900 border-b border-slate-800 sticky top-0 z-50 px-4 py-3 shadow-md">
         <div class="max-w-4xl mx-auto flex justify-between items-center">
             <h1 class="text-lg font-bold bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">🌐 Macro & Earning Hub</h1>
-            <span class="text-xs bg-blue-500/20 text-blue-400 px-2.5 py-1 rounded-full font-medium border border-blue-500/30">App V1</span>
+            <span class="text-xs bg-emerald-500/20 text-emerald-400 px-2.5 py-1 rounded-full font-medium border border-emerald-500/30 animate-pulse">⚡ Live TSMC Earning</span>
         </div>
     </header>
 
@@ -27,8 +27,24 @@
 
         <!-- Tab 1: Calendar -->
         <section id="tab-calendar" class="space-y-4">
-            <h2 class="text-xl font-semibold text-slate-200">ปฏิทินเศรษฐกิจสำคัญ (Macro & Earnings)</h2>
+            <div class="flex justify-between items-center">
+                <h2 class="text-xl font-semibold text-slate-200">ปฏิทินเศรษฐกิจ & แจ้งเตือนงบ</h2>
+                <span class="text-xs text-amber-400 bg-amber-500/10 px-2 py-1 rounded border border-amber-500/20">🔔 เปิดแจ้งเตือนแล้ว</span>
+            </div>
             <div class="space-y-3">
+                <!-- TSMC Earning Alert (Tomorrow) -->
+                <div class="bg-gradient-to-r from-emerald-950/40 to-slate-900 border border-emerald-500/30 p-4 rounded-2xl flex items-center justify-between">
+                    <div>
+                        <span class="text-xs bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded font-bold">🚨 แจ้งเตือนพรุ่งนี้ (Earnings)</span>
+                        <h3 class="font-bold text-base mt-1 text-emerald-200">TSMC (Taiwan Semiconductor) Q3 Earnings</h3>
+                        <p class="text-xs text-slate-300 mt-0.5">รายงานผลประกอบการและยอดจัดส่งเวเฟอร์ชิป AI</p>
+                    </div>
+                    <div class="text-right whitespace-nowrap pl-2">
+                        <span class="text-sm font-bold text-emerald-400">15 ต.ค. 2026</span>
+                        <p class="text-[10px] text-emerald-500 font-medium">พรุ่งนี้!</p>
+                    </div>
+                </div>
+
                 <div class="bg-slate-900 border border-slate-800 p-4 rounded-2xl flex items-center justify-between">
                     <div>
                         <span class="text-xs bg-blue-500/20 text-blue-400 px-2 py-0.5 rounded font-semibold">Macro - FOMC</span>
@@ -40,6 +56,7 @@
                         <p class="text-[10px] text-slate-500">01:00 น.</p>
                     </div>
                 </div>
+
                 <div class="bg-slate-900 border border-slate-800 p-4 rounded-2xl flex items-center justify-between">
                     <div>
                         <span class="text-xs bg-blue-500/20 text-blue-400 px-2 py-0.5 rounded font-semibold">Macro - CPI</span>
@@ -51,43 +68,55 @@
                         <p class="text-[10px] text-slate-500">20:30 น.</p>
                     </div>
                 </div>
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-2xl flex items-center justify-between">
-                    <div>
-                        <span class="text-xs bg-blue-500/20 text-blue-400 px-2 py-0.5 rounded font-semibold">Macro - PCE</span>
-                        <h3 class="font-bold text-base mt-1">ประกาศดัชนี PCE Price Index</h3>
-                        <p class="text-xs text-slate-400 mt-0.5">มาตรวัดเงินเฟ้อตัวโปรดของเฟด</p>
-                    </div>
-                    <div class="text-right whitespace-nowrap pl-2">
-                        <span class="text-sm font-bold text-amber-400">27 พ.ย. 2026</span>
-                        <p class="text-[10px] text-slate-500">20:30 น.</p>
-                    </div>
-                </div>
             </div>
         </section>
 
         <!-- Tab 2: Earnings Summary -->
         <section id="tab-earnings" class="space-y-4 hidden">
             <h2 class="text-xl font-semibold text-slate-200">สรุปสาระสำคัญงบการเงินรายตัว</h2>
+            
+            <!-- TSMC Preview / Live Card -->
+            <div class="bg-slate-900 border border-emerald-500/30 p-5 rounded-2xl space-y-4 shadow-lg">
+                <div class="flex justify-between items-start border-b border-slate-800 pb-3">
+                    <div>
+                        <span class="text-xs bg-emerald-500/20 text-emerald-400 px-2.5 py-1 rounded font-bold">TSMC (Q3 Preview / Update)</span>
+                        <h3 class="text-lg font-bold mt-2">สรุปประเด็นสำคัญงบ TSMC</h3>
+                    </div>
+                    <span class="text-xs text-emerald-400 font-medium bg-emerald-500/10 px-2 py-1 rounded">15 ต.ค. นี้</span>
+                </div>
+                <div class="space-y-3 text-sm text-slate-300">
+                    <div class="bg-slate-950/50 p-3 rounded-xl border border-slate-800/60">
+                        <strong class="text-blue-400 block mb-1">📌 รายได้และอัตรากำไร (Revenue & Gross Margin):</strong>
+                        รออัปเดตตัวเลขจริงหลังประกาศพรุ่งนี้ ประเด็นสำคัญคืออัตรากำไรขั้นต้น (Gross Margin) จะยืนเหนือ 53-55% ตามคาดจากความต้องการชิป 3nm และ CoWoS Packaging หรือไม่
+                    </div>
+                    <div class="bg-slate-950/50 p-3 rounded-xl border border-slate-800/60">
+                        <strong class="text-amber-400 block mb-1">📌 งบลงทุน (CapEx) และกำลังการผลิต AI:</strong>
+                        ติดตามมุมมองผู้บริหารต่อคำสั่งซื้อจากค่าย AI ทั้งหมด (NVIDIA, AMD, Apple) ว่าจะมีการปรับเพิ่มงบลงทุนโครงสร้างพื้นฐานอีกหรือไม่
+                    </div>
+                    <div class="bg-slate-950/50 p-3 rounded-xl border border-slate-800/60">
+                        <strong class="text-emerald-400 block mb-1">📌 แนวโน้มไตรมาสถัดไป (Guidance):</strong>
+                        สัญญาณความต้องการชิปประมวลผลความเร็วสูง (HPC) และสมาร์ทโฟนระดับไฮเอนด์
+                    </div>
+                </div>
+            </div>
+
+            <!-- ASML Card -->
             <div class="bg-slate-900 border border-slate-800 p-5 rounded-2xl space-y-4">
                 <div class="flex justify-between items-start border-b border-slate-800 pb-3">
                     <div>
-                        <span class="text-xs bg-emerald-500/20 text-emerald-400 px-2.5 py-1 rounded font-bold">ASML (Q3 Financial Results)</span>
+                        <span class="text-xs bg-blue-500/20 text-blue-400 px-2.5 py-1 rounded font-bold">ASML (Q3 Financial Results)</span>
                         <h3 class="text-lg font-bold mt-2">สรุปประเด็นสำคัญงบ ASML</h3>
                     </div>
-                    <span class="text-xs text-slate-400">ล่าสุด</span>
+                    <span class="text-xs text-slate-400">ก่อนหน้า</span>
                 </div>
                 <div class="space-y-3 text-sm text-slate-300">
                     <div class="bg-slate-950/50 p-3 rounded-xl border border-slate-800/60">
                         <strong class="text-blue-400 block mb-1">📌 รายได้และกำไรสุทธิ:</strong>
-                        เติบโตตามคาดจากความต้องการเครื่อง Lithography ระดับไฮเอนด์ (EUV) เพื่อรองรับโครงสร้างพื้นฐาน AI
+                        เติบโตตามคาดจากความต้องการเครื่อง EUV เพื่อรองรับโรงงานผลิตชิป
                     </div>
                     <div class="bg-slate-950/50 p-3 rounded-xl border border-slate-800/60">
                         <strong class="text-amber-400 block mb-1">📌 ยอดคำสั่งซื้อใหม่ (Net Bookings):</strong>
-                        สะท้อนคำสั่งซื้อจากลูกค้ารายใหญ่ (TSMC, Samsung, Intel) ที่ยังคงหนาแน่น
-                    </div>
-                    <div class="bg-slate-950/50 p-3 rounded-xl border border-slate-800/60">
-                        <strong class="text-emerald-400 block mb-1">📌 มุมมองผู้บริหาร (Guidance):</strong>
-                        เน้นย้ำความยืดหยุ่นและการบริหารต้นทุนท่ามกลางความท้าทายระดับมหภาค
+                        สะท้อนคำสั่งซื้อจากลูกค้ารายใหญ่ (รวมถึง TSMC) ที่ยังคงหนาแน่น
                     </div>
                 </div>
             </div>
@@ -98,7 +127,7 @@
             <h2 class="text-xl font-semibold text-slate-200">Checklist จัดการ Watchlist หุ้นที่สนใจ</h2>
             <div class="bg-slate-900 border border-slate-800 p-4 rounded-2xl space-y-4">
                 <div class="flex gap-2">
-                    <input type="text" id="newStockInput" placeholder="พิมพ์ชื่อหุ้น Ticker เช่น NVDA, TSLA, PDD" class="flex-1 bg-slate-950 border border-slate-800 rounded-xl px-4 py-2 text-sm text-slate-100 focus:outline-none focus:border-blue-500">
+                    <input type="text" id="newStockInput" placeholder="พิมพ์ชื่อหุ้น Ticker เช่น TSMC, NVDA, ASML" class="flex-1 bg-slate-950 border border-slate-800 rounded-xl px-4 py-2 text-sm text-slate-100 focus:outline-none focus:border-blue-500">
                     <button onclick="addStock()" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-xl text-sm font-medium transition">เพิ่มหุ้น</button>
                 </div>
                 <div id="stockList" class="space-y-2"></div>
@@ -116,7 +145,7 @@
             document.getElementById('btn-' + tab).className = "px-4 py-2 rounded-xl text-sm font-medium bg-blue-600 text-white whitespace-nowrap transition";
         }
 
-        let watchlist = JSON.parse(localStorage.getItem('macro_watchlist')) || ['ASML', 'NVDA', 'AAPL', 'MSFT'];
+        let watchlist = JSON.parse(localStorage.getItem('macro_watchlist')) || ['TSMC', 'ASML', 'NVDA', 'AAPL'];
 
         function renderWatchlist() {
             const container = document.getElementById('stockList');
